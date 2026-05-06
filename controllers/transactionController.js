@@ -1,7 +1,7 @@
 const Transaction = require("../models/Transaction");
 
 
-// 📜 GET USER TRANSACTIONS
+// get user transactions
 exports.getUserTransactions = async (req, res) => {
   try {
     const transactions = await Transaction.find({
@@ -16,7 +16,7 @@ exports.getUserTransactions = async (req, res) => {
 };
 
 
-// 🔍 GET SINGLE TRANSACTION
+// get single transaction
 exports.getTransactionById = async (req, res) => {
   try {
     const transaction = await Transaction.findById(req.params.id);

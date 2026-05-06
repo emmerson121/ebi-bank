@@ -50,17 +50,17 @@ const transactionSchema = new mongoose.Schema(
       default: "pending"
     },
 
-    // 🧾 NIBSS TRANSACTION ID (TSQ)
+    // NIBSS transaction Id (TSQ)
     transactionId: {
       type: String
     },
 
-    // 📝 OPTIONAL
+    // optional
     narration: {
       type: String
     },
 
-    // 🛑 ERROR LOGGING
+    // error logging
     failureReason: {
       type: String
     }

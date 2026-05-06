@@ -1,7 +1,7 @@
 const User = require("../models/User");
 
 
-// 👤 GET PROFILE
+// get profile
 exports.getUserProfile = async (req, res) => {
   try {
     const user = await User.findById(req.user.id).select("-password");
@@ -14,7 +14,7 @@ exports.getUserProfile = async (req, res) => {
 };
 
 
-// 🪪 SUBMIT KYC
+// submit KYC
 exports.submitKYC = async (req, res) => {
   try {
     const { kycType, kycID, dob } = req.body;

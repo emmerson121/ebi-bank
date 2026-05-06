@@ -27,7 +27,7 @@ exports.transferFunds = async (req, res) => {
     });
 
     try {
-      // 💸 STEP 3: Call NIBSS Transfer
+      // Step 3: Call NIBSS Transfer
       const response = await nibss.transfer({
         from: user.accountNumber,
         to,
@@ -36,7 +36,7 @@ exports.transferFunds = async (req, res) => {
 
       const data = response.data;
 
-      // ✅ STEP 4: Update Success
+      // Step 4: Update Success
       transaction.status = "success";
       transaction.transactionId = data.transactionId;
 

@@ -3,7 +3,7 @@ const jwt = require("jsonwebtoken");
 
 
 
-// 🔐 GENERATE JWT
+// generate JWT
 const generateToken = (user) => {
   return jwt.sign(
     {
@@ -16,7 +16,7 @@ const generateToken = (user) => {
 };
 
 
-// 📝 REGISTER
+// register user
 exports.registerUser = async (req, res) => {
   try {
     const { firstName, lastName, email, password } = req.body;
@@ -47,7 +47,7 @@ exports.registerUser = async (req, res) => {
 };
 
 
-// 🔐 LOGIN
+// login
 exports.loginUser = async (req, res) => {
   try {
     const { email, password } = req.body;
